@@ -3,11 +3,20 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import TopSection from './components/TopSection';
+
+function Welcome(props){
+  return (<h1>
+    hello guys my name is, {props.name}
+  </h1>);
+}
+
+// const element = <TopSection work="yess"/>
+// const element = <Welcome name="yusuf"/>;
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  // <TopSection work="yes yesy"/>,
+  <App/>,
   document.getElementById('root')
 );
 
