@@ -5,6 +5,7 @@ import Update from './update/Update'
 import Service from './services/Services'
 import Testimonial from './testimonial/Testimonial'
 import styled from 'styled-components'
+import Contact from './contact/Contact'
 
 const MainContainer = styled.div`
   width:100%;
@@ -23,6 +24,7 @@ export default class SmartHome extends Component {
         <Update/>
         <Service/>
         <Testimonial/>
+        <Contact/>
       </MainContainer>
     )
   }

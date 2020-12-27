@@ -12,7 +12,7 @@ const TopSection = styled.div`
   background-image: url(${backgroundImage});
   background-repeat: no-repeat;
   padding-inline-start: 190px;
-  margin-top: 0;  
+  margin-top: 0;
   display: flex;
 `;
 
@@ -50,6 +50,12 @@ const ContainerDetails = styled.p`
   margin-top: 36px;
 `;
 
+const ButtonContainerHome = styled.div`
+  /* margin-left: ${({white}) => (white? "0px" : "16px")}; */
+  display: flex;
+  flex-direction: row;
+`;
+
 export default class Home extends Component {
   constructor(props) {
     super(props);
@@ -65,18 +71,24 @@ export default class Home extends Component {
       <div>
         <TopSection>
           <ContainerBody>
-          <Navbar/>
+            <Navbar />
             <ContainerTitle>
               <Title title={this.state.title} />
               <Title title={this.state.secondTitle} />
-              <span style={{color:'rgba(30, 206, 122, 1)'}}>to take</span> care of itself.
+              <span style={{ color: "rgba(30, 206, 122, 1)" }}>
+                to take
+              </span>{" "}
+              care of itself.
             </ContainerTitle>
             {/* <ContainerDetails>
               Turn your home into a smarthome today with a simple & affordable
               upgrade. Discover the upgrade that automates home maintenance.
             </ContainerDetails> */}
-            <TitleDescription home/>
-            <Button/>
+            <TitleDescription home />
+            <ButtonContainerHome>
+              <Button white>Home</Button>
+              <Button>Smart</Button>
+            </ButtonContainerHome>
           </ContainerBody>
         </TopSection>
       </div>

@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const ButtonContainer = styled.div`
-  width: 272px;
+  width: 150px;
   height: 44px;
   left: 119px;
   top: 64px;
@@ -21,8 +21,8 @@ const ButtonDetails = styled.button`
   color: #ffffff;
   border: ${({ white }) => (white ? "none" : "1px solid #ffffff")};
   background-color: ${({white}) => (white? "#1ECE7A" : "transparent")};
-  margin-left: ${({white}) => (white? "0px" : "16px")};
-  display: inline;
+  /* margin-left: ${({white}) => (white? "0px" : "16px")};
+  display: inline; */
   transition: all 220ms ease-in-out;
   cursor: pointer;
   &:hover {
@@ -31,14 +31,11 @@ const ButtonDetails = styled.button`
   }
 `;
 
-export default function Button() {
+export default function Button(props) {
   return <div>
     <ButtonContainer>
-      <ButtonDetails white>
-        Get Started
-      </ButtonDetails>
-      <ButtonDetails>
-        Learn More
+      <ButtonDetails {...props}>
+        {props.children}
       </ButtonDetails>
     </ButtonContainer>
   </div>;
