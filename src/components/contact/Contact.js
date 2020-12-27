@@ -3,6 +3,7 @@ import styled from "styled-components";
 import ContactImg from "../../assets/images/illustrationre.png";
 import Button from "../../containers/button/button";
 import ImgLogo from "../../assets/images/logocontact.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const ContactContainer = styled.div`
   background-color: white;
@@ -339,12 +340,17 @@ export default class Contact extends Component {
           <FooterRightContainter>
             <TitleContact>Stay Connected</TitleContact>
             <SubTitleContact>
-              {" "}
-              <i class="fa fa-facebook-official blue-color"></i>
+              <FontAwesomeIcon icon="fa fa-facebook-official blue-color" />
               Facebook
             </SubTitleContact>
-            <SubTitleContact>Twitter</SubTitleContact>
-            <SubTitleContact>Instagram</SubTitleContact>
+            <SubTitleContact>
+              <FontAwesomeIcon icon="fa fa-facebook-official blue-color" />
+              Twitter
+            </SubTitleContact>
+            <SubTitleContact>
+              <FontAwesomeIcon icon="fa fa-facebook-official blue-color" />
+              Instagram
+            </SubTitleContact>
           </FooterRightContainter>
         </Footer>
         <TxtCopyRight>Copyright© 2020. Siphome Smart home LLC.</TxtCopyRight>
