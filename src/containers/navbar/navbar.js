@@ -14,6 +14,7 @@ const NavbarContainer = styled.div`
 const LogoContainer = styled.img`
   width: 42px;
   height: 42px;
+  cursor: pointer;
 `;
 
 const TextContainer = styled.h3`
@@ -26,6 +27,10 @@ const TextContainer = styled.h3`
   color: white;
   padding-left: 12px;
   padding-right: 96px;
+  cursor: pointer;
+  &:hover {
+    color: #1ECE7A;
+  }
 `;
 
 const TextNavbar = styled.p`
@@ -35,6 +40,10 @@ const TextNavbar = styled.p`
   float: left;
   color: white;
   font-size: 17px;
+  cursor: pointer;
+  &:hover {
+    color: #1ECE7A;
+  }
 `;
 
 const TextNavbarRight = styled.p`
@@ -44,6 +53,7 @@ const TextNavbarRight = styled.p`
   /* font-size: 16px; */
   text-align: center;
   float: right;
+  cursor: pointer;
 `;
 
 export default function Navbar() {
@@ -65,7 +75,6 @@ export default function Navbar() {
             // marginLeft: "",
             borderLeft: "2px solid #1ece7a",
             color: "rgba(30, 206, 122, 1)",
-            // paddingLeft: "10px",
           }}
         >
           Get Started

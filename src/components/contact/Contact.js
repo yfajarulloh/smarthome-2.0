@@ -231,9 +231,11 @@ const SubTitleContact = styled.div`
   font-weight: normal;
   font-size: 20px;
   line-height: 240%;
-  /* or 48px */
-  /* Dark Grey */
   color: #606c84;
+  &:hover{
+    color: rgba(28, 87, 201, 1);
+    font-weight: bold;
+  }
 `;
 
 const TxtCopyRight = styled.div`
@@ -320,9 +322,7 @@ export default class Contact extends Component {
           <FooterMiddleLeftContainter>
             <TitleContact>Navigation</TitleContact>
             <SubTitleContact>Home</SubTitleContact>
-            <SubTitleContact
-              style={{ color: "rgba(28, 87, 201, 1)", fontWeight: "600" }}
-            >
+            <SubTitleContact>
               Features
             </SubTitleContact>
             <SubTitleContact>Services</SubTitleContact>

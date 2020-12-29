@@ -2,10 +2,10 @@ import { faQuoteLeft, faQuoteRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import styled from "styled-components";
-
+import ImgDot from "../../assets/images/Ellipse 32 (1).png"
 
 const CardContainer = styled.div`
-  width: 555px;
+  width: 500px;
   height: 279px;
   /* left: 141px; */
   margin-top: 90px;
@@ -19,19 +19,24 @@ const CardContainer = styled.div`
 `;
 
 const QuoteIcon = styled.div`
+  /* width: %; */
+  /* height: 100px; */
   position: absolute;
   float: right;
-  top: 30px;
-  right: 15px;
-  color: gray;
+  top: 156px;
+  right: 30px;
+  color: rgba(0, 0, 0, 0.06);
+  /* Pure White */
+  /* background: #ffffff; */
+  box-shadow: 0px 20px 48px rgba(0, 0, 0, 0.06);
+  border-radius: 24px;
   font-size: 45px;
 `;
 
 const ReviewText = styled.p`
   margin-top: 30px;
-  width: 450px;
+  width: 420px;
   height: 96px;
-  padding-left: 30px;
   top: 30px;
   /* Hero / Paragraph */
   font-family: Inter;
@@ -40,37 +45,46 @@ const ReviewText = styled.p`
   font-size: 20px;
   line-height: 160%;
   text-align: left;
-  /* or 32px */
-  /* Solid Black */
   color: #262b35;
+  margin-bottom: 42px;
 `;
 
-const userImg = styled.img`
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-left: 30px;
+`;
+
+const UserImage = styled.img`
   position: absolute;
-  width: 74px;
-  height: 74px;
-  left: 30px;
-  top: 42px;
-  border-radius: 50%;
-  /* top: 5186px; */
+  float: right;
+  top: -20px;
+  right: -30px;
+  color: rgba(0, 0, 0, 0.06);
+  /* Pure White */
+  /* background: #ffffff; */
+  box-shadow: 0px 20px 48px rgba(0, 0, 0, 0.06);
+  border-radius: 24px;
+  font-size: 45px;
 `;
 
-const userName = styled.span`
+const UserName = styled.span`
   /* Body / Text */
-  font-family: Inter;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 160%;
   top: 42px;
   bottom: 11px;
-  /* left: 30px; */
-  /* identical to box height, or 24px */
-  /* Gray */
-  color: #606c84;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  /* identical to box height, or 133% */
+  /* Solid Black */
+  color: #262b35;
+  margin-bottom: 11px;
 `;
 
-const jobDesk = styled.span`
+const JobDesk = styled.span`
   font-family: Inter;
   font-style: normal;
   font-weight: normal;
@@ -87,14 +101,20 @@ export default function ReviewCard(props) {
   return (
     <div>
       <CardContainer>
-      {/* <userImg src={userImgUrl} alt="yusuf" /> */}
+        {/* <userImg src={userImgUrl} alt="yusuf" /> */}
         <QuoteIcon>
-          <FontAwesomeIcon icon={faQuoteRight} />
+          <FontAwesomeIcon
+            style={{ width: "2em", height: "70px" }}
+            icon={faQuoteRight}
+          />
         </QuoteIcon>
-        <ReviewText>{text}</ReviewText>
-        <userName>{username}</userName>
-        <jobDesk>{jobdesk}</jobDesk>
+        <Container>
+        <UserImage src={ImgDot}/>
+          <ReviewText>{text}</ReviewText>
+          <UserName>{username}</UserName>
+          <JobDesk>{jobdesk}</JobDesk>
+        </Container>
       </CardContainer>
     </div>
-  )
+  );
 }

@@ -25,8 +25,7 @@ const TestimonialContainer = styled.div`
   align-items: center;
   /* background-color:rgb(131, 185, 185); */
   margin-left: 330px;
-  margin-bottom:161px;
-
+  margin-bottom: 161px;
 `;
 
 const SectionSubtitle = styled.div`
@@ -70,12 +69,12 @@ const StyledDotGroup = styled(DotGroup)`
     border: none;
     outline: none;
     &:not(:last-of-type) {
-      margin-right: 3px;
+      margin-right: 20px;
     }
   }
 
   .carousel__dot--selected {
-    background-color: #1ece7a;
+    background-color: #1C57C9;
   }
 `;
 
@@ -109,18 +108,30 @@ export default class Testimonial extends Component {
                 />
               </Slide>
               <Slide index={1}>
-                <ReviewCard />
+                <ReviewCard
+                  text="Thank you for introducing me to Siphome!  We like how the system gives updates to us and the homeowner as well to give us a real time update on how everything is working."
+                  username="Gladina Samantha"
+                  jobdesk="CEO JobDesk United, LLC"
+                />
               </Slide>
               <Slide index={2}>
-                <ReviewCard />
+                <ReviewCard
+                  text="We have been waiting on this product and now that we have installed a few. We think it will make the industry by storm."
+                  username="Yusuf Fajarulloh"
+                  jobdesk="CEO Repository"
+                />
               </Slide>
               <Slide index={3}>
-                <ReviewCard />
+                <ReviewCard
+                  text="We have been waiting on this product and now that we have installed a few. We think it will make the industry by storm."
+                  username="Nadya Aranti"
+                  jobdesk="CEO Nad Company"
+                />
               </Slide>
             </Slider>
             <StyledDotGroup />
           </CarouselProvider>
-          </ContainerCarousel>
+        </ContainerCarousel>
       </TestimonialContainer>
     );
   }
