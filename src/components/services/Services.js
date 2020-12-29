@@ -66,6 +66,10 @@ const ContainerDetails = styled.div`
   margin-bottom: 93px;
 `;
 
+const TitleContainer = styled.div`
+  text-align:center;
+`;
+
 const ImageContainer = styled.img`
   width: 674px;
   height: 600px;
@@ -113,11 +117,10 @@ export default class Services extends Component {
       <div>
         <ServicesContainer>
           <ContentHomeContainer>
-            <ContentTitle>SERVICES</ContentTitle>
-            {/* {this.props.title.featureServiceData.title} */}
-            <ContainerDescription>
-              Bring more systems into the network
-            </ContainerDescription>
+            <TitleContainer>
+            <Title>SERVICES</Title>
+            <Title sub> Bring more systems into the network</Title>
+            </TitleContainer>
             <ContainerDetails>
               Find out just how far Siphome can lead your home into next-gen
               intelligence.

@@ -15,6 +15,7 @@ import userImgUrl2 from "../../assets/images/Ellipse 32 (1).png";
 import userImgUrl3 from "../../assets/images/Ellipse 32 (2).png";
 import userImgUrl4 from "../../assets/images/Ellipse 32 (1).png";
 import ReviewCard from "../../containers/reviewCards/ReviewCard";
+import Title from "../../containers/title/Title";
 // const styleCarouselProvider = styled(CarouselProvider)`
 
 const TestimonialContainer = styled.div`
@@ -74,7 +75,7 @@ const StyledDotGroup = styled(DotGroup)`
   }
 
   .carousel__dot--selected {
-    background-color: #1C57C9;
+    background-color: #1c57c9;
   }
 `;
 
@@ -86,12 +87,9 @@ export default class Testimonial extends Component {
   render() {
     return (
       <TestimonialContainer>
-        <SectionSubtitle>Testimonials</SectionSubtitle>
-        <SectionTitle>
-          {" "}
-          Let’s see what people says <br />
-          about Siphome{" "}
-        </SectionTitle>
+        <Title>Testimonials</Title>
+        <Title sub>Let’s see what people says</Title>
+        <Title sub>about Siphome</Title>
         <ContainerCarousel>
           <CarouselProvider
             naturalSlideWidth={200}

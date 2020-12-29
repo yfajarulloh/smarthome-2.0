@@ -8,11 +8,12 @@ import img2 from "../../assets/images/update2.png";
 import img3 from "../../assets/images/update3.png";
 import img4 from "../../assets/images/update4.png";
 import UpdateData from "../../containers/updateData/UpdateData";
+import Title from "../../containers/title/Title";
 
 const UpdateContainer = styled.div`
   padding-inline-start: 15%;
   margin-top: 100px;
-  margin-bottom:100px;
+  margin-bottom: 100px;
   /* background-color:green; */
   /* width: 1440px; */
   height: 1170px;
@@ -131,10 +132,12 @@ export default class Update extends Component {
       <div>
         <UpdateContainer>
           <BackgroundImage>
-            <TitleContainer>update</TitleContainer>
-            <DescriptionContainer>
+            {/* <TitleContainer>update</TitleContainer> */}
+            <Title>update</Title>
+            {/* <DescriptionContainer>
               It starts with an upgrade
-            </DescriptionContainer>
+            </DescriptionContainer> */}
+            <Title sub> It starts with an upgrade</Title>
             <ImageContainer src={updateImg} />
             {/* <UpdateData dataUpdate={dataUpdate} /> */}
             <ContainerData>

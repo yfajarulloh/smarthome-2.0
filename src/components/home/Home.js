@@ -3,7 +3,6 @@ import styled from "styled-components";
 import backgroundImage from "../../assets/images/hero-imagessss.png";
 import Button from "../../containers/button/button";
 import Navbar from "../../containers/navbar/navbar";
-import Title from "../../containers/title/Title";
 import TitleDescription from "../../containers/title/TitleDescription";
 
 const TopSection = styled.div`
@@ -22,6 +21,7 @@ const ContainerBody = styled.div`
 `;
 
 const ContainerTitle = styled.p`
+  width: 500px;
   font-style: normal;
   font-weight: bold;
   font-size: 55px;
@@ -51,7 +51,6 @@ const ContainerDetails = styled.p`
 `;
 
 const ButtonContainerHome = styled.div`
-  /* margin-left: ${({white}) => (white? "0px" : "16px")}; */
   display: flex;
   flex-direction: row;
 `;
@@ -59,13 +58,12 @@ const ButtonContainerHome = styled.div`
 export default class Home extends Component {
   constructor(props) {
     super(props);
-    // this.state = {date: new Date()};
+
     this.state = {
-      title: "Imagine your",
-      secondTitle: "home smart enough",
+      data:
+        "Turn your home into a smarthome today with a simple & affordable upgrade. Discover the upgrade that automates home maintenance.",
     };
   }
-
   render() {
     return (
       <div>
@@ -73,18 +71,13 @@ export default class Home extends Component {
           <ContainerBody>
             <Navbar />
             <ContainerTitle>
-              <Title title={this.state.title} />
-              <Title title={this.state.secondTitle} />
-              <span style={{ color: "rgba(30, 206, 122, 1)" }}>
-                to take
-              </span>{" "}
-              care of itself.
+              Imagine your
+              <br /> home smart enough
+              <br /> <span style={{ color: "#1ECE7A" }}>to take care</span> of
+              itself.
             </ContainerTitle>
-            {/* <ContainerDetails>
-              Turn your home into a smarthome today with a simple & affordable
-              upgrade. Discover the upgrade that automates home maintenance.
-            </ContainerDetails> */}
-            <TitleDescription home />
+            {/* <TitleDescription home /> */}
+            <TitleDescription dataFromParent = {this.state.data} home/>
             <ButtonContainerHome>
               <Button white>Home</Button>
               <Button>Smart</Button>

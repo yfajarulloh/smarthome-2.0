@@ -35,7 +35,7 @@ const TitleContainer = styled.div`
   line-height: 160%;
   letter-spacing: 0.01em;
   color: #606c84;
-  align-items: center;
+  /* align-items: center; */
   /* text-align:center; */
 `;
 
@@ -59,20 +59,20 @@ const RightContainer = styled.div`
   float: left;
 `;
 
-const ContentTitle = styled.p`
-  width: 141px;
-  height: 21px;
-  /* Section / Subtitle */
-  font-style: normal;
-  font-weight: bold;
-  font-size: 15px;
-  line-height: 140%;
-  /* identical to box height, or 21px */
-  letter-spacing: 0.6em;
-  text-transform: uppercase;
-  /* Primary Blue */
-  color: #1c57c9;
-`;
+// const ContentTitle = styled.p`
+//   width: 141px;
+//   height: 21px;
+//   /* Section / Subtitle */
+//   font-style: normal;
+//   font-weight: bold;
+//   font-size: 15px;
+//   line-height: 140%;
+//   /* identical to box height, or 21px */
+//   letter-spacing: 0.6em;
+//   text-transform: uppercase;
+//   /* Primary Blue */
+//   color: #1c57c9;
+// `;
 
 const ContentTitleCapital = styled.p`
   width: 287px;
@@ -108,13 +108,13 @@ const ContainerDetailsDesc = styled.div`
   margin-top: 60px;
   /* flex-direction: row; */
   /* display: flex; */
-  float:left;
+  float: left;
 `;
 
 const ContainerDetailsCard = styled.div`
   width: 324px;
   height: 226px;
-  float:left;
+  float: left;
 `;
 
 const CardImg = styled.img`
@@ -178,6 +178,8 @@ class Feature extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      data:
+        "  Every day your home faces countless potential threats. Every day you face countless potential headaches. A small problem can become a major disaster. Early warning signs exist but often you can't hear or see them.",
       img: null,
       title: "",
       desc: "",
@@ -242,17 +244,14 @@ class Feature extends Component {
       <div>
         <FeatureContainer>
           <ImageDotdot src={imgDotdot} />
-          <TitleContainer>
-            Every day your home faces countless potential threats. Every day you
-            face countless potential headaches. A small problem can become a
-            major disaster. Early warning signs exist but often you can't hear
-            or see them.
-          </TitleContainer>
+          <TitleDescription dataFromParent = {this.state.data}/>
           <ContentContainer>
             <ImageIllustration src={imgIlustration} alt="image ilustration" />
             <RightContainer>
-              <ContentTitle>Features</ContentTitle>
-              <ContentTitleCapital>Meet Siphome</ContentTitleCapital>
+              {/* <ContentTitle>Features</ContentTitle> */}
+              <Title>Features</Title>
+              {/* <ContentTitleCapital>Meet Siphome</ContentTitleCapital> */}
+              <Title sub>Meet Siphome</Title>
               <ContainerDetails>
                 The most comprehensive smart solution to home maintenance. All
                 it takes is a simple and affordable sensor installation by one
