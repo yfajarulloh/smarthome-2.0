@@ -232,6 +232,7 @@ const SubTitleContact = styled.div`
   font-size: 20px;
   line-height: 240%;
   color: #606c84;
+  cursor: pointer;
   &:hover{
     color: rgba(28, 87, 201, 1);
     font-weight: bold;

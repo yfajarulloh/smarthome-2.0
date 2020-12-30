@@ -27,7 +27,7 @@ export default function TitleDescription(props) {
         Turn your home into a smarthome today with a simple & affordable
         upgrade. Discover the upgrade that automates home maintenance.
       </ContainerDetails> */}
-          <ContainerDetails {...props}>
+        <ContainerDetails {...props}>
           {props.dataFromParent}
       </ContainerDetails>
     </div>

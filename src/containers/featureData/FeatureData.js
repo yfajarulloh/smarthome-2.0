@@ -1,16 +1,19 @@
 import React from 'react'
+import styled from 'styled-components'
 
+const ContainerDetailsDesc = styled.div`
+  width: 658px;
+  height: 488px;
+  margin-top: 60px;
+  /* flex-direction: row; */
+  /* display: flex; */
+  float: left;
+`;
 
 export default function FeatureData(props) {
-  
   return (
     <div>
-      {/* <div>{props.img}</div> */}
-      {/* {console.log('imageprops' ,image)}; */}
-      {/* <image src={image}/> */}
-      {/* <img></img> */}
-      <p>{props.title}</p>
-      <p>{props.description}</p>
+      <ContainerDetailsDesc>{props.dataFromParent}</ContainerDetailsDesc>
     </div>
   )
 }
