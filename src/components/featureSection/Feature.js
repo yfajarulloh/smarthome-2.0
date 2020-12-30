@@ -180,11 +180,7 @@ class Feature extends Component {
     this.state = {
       data:
         "  Every day your home faces countless potential threats. Every day you face countless potential headaches. A small problem can become a major disaster. Early warning signs exist but often you can't hear or see them.",
-      img: null,
-      title: "",
-      desc: "",
     };
-
     //   [
     //     {
     //     img: img1,
@@ -239,12 +235,28 @@ class Feature extends Component {
     // const ubah = () => {
     //   this.setState({img: img3})
     // }
+
+    const FeatureDetailData = {
+      images: [img1, img2, img3, img4],
+      titles: [
+        "Automatic Threat Detection",
+        "Smart Diagnostics",
+        "Disaster Prevention",
+        "24/7 Service​",
+      ],
+      descriptions: [
+        "Siphome reacts the moment your equipment fails, alerting you to the problem.",
+        "See exactly what is malfunctioning and compare your maintenance options on the same screen.",
+        "Predictive analytics lets you see what needs maintenance before it fails.",
+        "Siphome monitors your critical systems 24/7 so you can enjoy peace of mind.",
+      ],
+    };
     console.log("data", data);
     return (
       <div>
         <FeatureContainer>
           <ImageDotdot src={imgDotdot} />
-          <TitleDescription dataFromParent = {this.state.data}/>
+          <TitleDescription dataFromParent={this.state.data} />
           <ContentContainer>
             <ImageIllustration src={imgIlustration} alt="image ilustration" />
             <RightContainer>
@@ -257,21 +269,20 @@ class Feature extends Component {
                 it takes is a simple and affordable sensor installation by one
                 of our Siphome certified technicians.
               </ContainerDetails>
-              <ContainerDetailsDesc>
+              <FeatureData FeatureDetailData={FeatureDetailData}/>
+              {/* <ContainerDetailsDesc>
                 {data.map((val, idx) => (
                   <ContainerDetailsCard key={idx}>
                     <CardImg src={val.img} />
                     <CardTitle>
-                      {/* <FeatureData title={this.state.titile}/> */}
                       {val.titile}
                     </CardTitle>
                     <CardDesc>
-                      {/* <FeatureData description={this.state.description}/> */}
                       {val.desc}
                     </CardDesc>
                   </ContainerDetailsCard>
                 ))}
-              </ContainerDetailsDesc>
+              </ContainerDetailsDesc> */}
             </RightContainer>
           </ContentContainer>
         </FeatureContainer>
