@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-
 const ContainerDetailsDesc = styled.div`
   width: 658px;
   height: 488px;
@@ -52,12 +51,17 @@ export default function FeatureData(props) {
   return (
     <div>
       <ContainerDetailsDesc>
-          <ContainerDetailsCard>
-            {/* <CardImg /> */}
-            <CardTitle>
-            </CardTitle>
-            <CardDesc></CardDesc>
-          </ContainerDetailsCard>
+      {props.dataFeature.map((Value, index) =>(
+        <ContainerDetailsCard key={index}>
+          <CardImg  src={Value.img}/>
+          <CardTitle>
+            {Value.titile}
+          </CardTitle>
+          <CardDesc>
+            {Value.desc}
+          </CardDesc> 
+        </ContainerDetailsCard>
+        ))}
       </ContainerDetailsDesc>
     </div>
   );

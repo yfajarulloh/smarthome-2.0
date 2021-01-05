@@ -12,13 +12,9 @@ import img4 from "../../assets/images/icon (2).png";
 
 const FeatureContainer = styled.div`
   padding-inline-start: 20%;
-  /* padding-bottom:182px; */
-  /* align-items:center; */
 `;
 
 const ImageDotdot = styled.img`
-  /* width: 200px; */
-  /* height: 240px; */
   float: right;
   margin: 0;
   display: flex;
@@ -59,20 +55,6 @@ const RightContainer = styled.div`
   float: left;
 `;
 
-// const ContentTitle = styled.p`
-//   width: 141px;
-//   height: 21px;
-//   /* Section / Subtitle */
-//   font-style: normal;
-//   font-weight: bold;
-//   font-size: 15px;
-//   line-height: 140%;
-//   /* identical to box height, or 21px */
-//   letter-spacing: 0.6em;
-//   text-transform: uppercase;
-//   /* Primary Blue */
-//   color: #1c57c9;
-// `;
 
 const ContentTitleCapital = styled.p`
   width: 287px;
@@ -181,76 +163,34 @@ class Feature extends Component {
       data:
         "  Every day your home faces countless potential threats. Every day you face countless potential headaches. A small problem can become a major disaster. Early warning signs exist but often you can't hear or see them.",
     };
-    //   [
-    //     {
-    //     img: img1,
-    //     titile: "Automatic Threat Detection",
-    //     description:
-    //       "Siphome reacts the moment your equipment fails, alerting you to the problem."
-    //     }
-    //   },
-    //   {
-    //     img: img2,
-    //     titile: "Smart Diagnostics",
-    //     description:
-    //       "See exactly what is malfunctioning and compare your maintenance options on the same screen.",
-    //   },
-    //   {
-    //     img: img3,
-    //     titile: "Disaster Prevention",
-    //     description:
-    //       "Predictive analytics lets you see what needs maintenance before it fails.",
-    //   },
-    //   {
-    //     img: img4,
-    //     titile: "24/7 Service​",
-    //     description:
-    //       "Siphome monitors your critical systems 24/7 so you can enjoy peace of mind.",
-    //   }];
-    //  }
-    //  ubah =( ) => {
-
-    //  }
-
-    //  componentDidMount(){
-
-    //   const {img, data} = this.props
-    //   if(data.length > 0){
-    //     this.setState({img: img})
-    //   }
-    //  }
-
-    //  componentDidUpdate(prevProps){
-    //    const {img, data} = this.props
-
-    //    if(this.props.img !== prevProps.img || this.props.data !== prevProps.data){
-
-    //     if(data.length > 0){
-    //       this.setState({img: img2})
-    //     }
-
-    //    }
   }
   render() {
-    // const ubah = () => {
-    //   this.setState({img: img3})
-    // }
-
-    const FeatureDetailData = {
-      images: [img1, img2, img3, img4],
-      titles: [
-        "Automatic Threat Detection",
-        "Smart Diagnostics",
-        "Disaster Prevention",
-        "24/7 Service​",
-      ],
-      descriptions: [
-        "Siphome reacts the moment your equipment fails, alerting you to the problem.",
-        "See exactly what is malfunctioning and compare your maintenance options on the same screen.",
-        "Predictive analytics lets you see what needs maintenance before it fails.",
-        "Siphome monitors your critical systems 24/7 so you can enjoy peace of mind.",
-      ],
-    };
+    const dataFeature = [
+      {
+        img: img1,
+        titile: "Automatic Threat Detection",
+        desc:
+          "Siphome reacts the moment your equipment fails, alerting you to the problem.",
+      },
+      {
+        img: img2,
+        titile: "Smart Diagnostics",
+        desc:
+          "See exactly what is malfunctioning and compare your maintenance options on the same screen.",
+      },
+      {
+        img: img3,
+        titile: "Disaster Prevention",
+        desc:
+          "Predictive analytics lets you see what needs maintenance before it fails.",
+      },
+      {
+        img: img4,
+        titile: "24/7 Service",
+        desc:
+          "Siphome monitors your critical systems 24/7 so you can enjoy peace of mind.",
+      },
+    ];
     console.log("data", data);
     return (
       <div>
@@ -260,29 +200,14 @@ class Feature extends Component {
           <ContentContainer>
             <ImageIllustration src={imgIlustration} alt="image ilustration" />
             <RightContainer>
-              {/* <ContentTitle>Features</ContentTitle> */}
               <Title>Features</Title>
-              {/* <ContentTitleCapital>Meet Siphome</ContentTitleCapital> */}
               <Title sub>Meet Siphome</Title>
               <ContainerDetails>
                 The most comprehensive smart solution to home maintenance. All
                 it takes is a simple and affordable sensor installation by one
                 of our Siphome certified technicians.
               </ContainerDetails>
-              <FeatureData FeatureDetailData={FeatureDetailData}/>
-              {/* <ContainerDetailsDesc>
-                {data.map((val, idx) => (
-                  <ContainerDetailsCard key={idx}>
-                    <CardImg src={val.img} />
-                    <CardTitle>
-                      {val.titile}
-                    </CardTitle>
-                    <CardDesc>
-                      {val.desc}
-                    </CardDesc>
-                  </ContainerDetailsCard>
-                ))}
-              </ContainerDetailsDesc> */}
+              <FeatureData dataFeature={dataFeature} />
             </RightContainer>
           </ContentContainer>
         </FeatureContainer>

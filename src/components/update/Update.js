@@ -14,34 +14,7 @@ const UpdateContainer = styled.div`
   padding-inline-start: 15%;
   margin-top: 100px;
   margin-bottom: 100px;
-  /* background-color:green; */
-  /* width: 1440px; */
   height: 1170px;
-`;
-
-const TitleContainer = styled.p`
-  width: 106px;
-  font-family: Inter;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 15px;
-  line-height: 140%;
-  letter-spacing: 0.6em;
-  text-transform: uppercase;
-  color: #1c57c9;
-  /* margin-top: 54px; */
-  /* left: 119px; */
-`;
-
-const DescriptionContainer = styled.p`
-  width: 440px;
-  left: 119px;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 42px;
-  line-height: 140%;
-  letter-spacing: -0.02em;
-  color: #262b35;
 `;
 
 const ImageContainer = styled.img`
@@ -51,7 +24,8 @@ const BackgroundImage = styled.div`
   background-image: url(${backgroundImg});
   background-repeat: no-repeat;
   /* float: right; */
-  width: 85%;
+  /* width: 85%; */
+  width:1400px;
   height: 150vh;
   margin-right: 150px;
 `;
@@ -89,7 +63,6 @@ const ContainerTitle = styled.p`
 
 const ContainerDescription = styled.p`
   width: 300px;
-  /* height: 96px; */
   height: 96px;
   margin-left: 90px;
   text-align: justify;
@@ -139,18 +112,7 @@ export default class Update extends Component {
             </DescriptionContainer> */}
             <Title sub> It starts with an upgrade</Title>
             <ImageContainer src={updateImg} />
-            {/* <UpdateData dataUpdate={dataUpdate} /> */}
-            <ContainerData>
-              {dataUpdate.map((val, i) => (
-                <ContainerCard key={i}>
-                  <ContainerImg src={val.img} />
-                  <descData>
-                    <ContainerTitle>{val.title}</ContainerTitle>
-                    <ContainerDescription>{val.desc}</ContainerDescription>
-                  </descData>
-                </ContainerCard>
-              ))}
-            </ContainerData>
+            <UpdateData dataUpdate={dataUpdate} />
           </BackgroundImage>
         </UpdateContainer>
       </div>

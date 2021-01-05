@@ -1,63 +1,58 @@
-import React from 'react'
-import styled from 'styled-components';
-
+import React from "react";
+import styled from "styled-components";
 
 const ContainerData = styled.div`
-  width: 500px;
-  height: 844px;
-  margin-left: 69px;
-  top: 74px;
+  /* width: 440px; */
+  /* height: 1044px; */
+  /* background-color:red; */
+  float: right;
+  display: flex;
+  flex-direction: column;
+  /* margin-bottom: 1000px; */
 `;
 
 const ContainerCard = styled.div`
   width: 500px;
   height: 196px;
-  top: 2257px;
+  /* background-color:red; */
 `;
 
 const ContainerImg = styled.img`
   width: 60px;
   height: 60px;
   margin-right: 42px;
+  float: left;
 `;
 
 const ContainerTitle = styled.p`
-  width: 68px;
-  height: 24px;
-  /* Body / Title */
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
   line-height: 24px;
-  /* identical to box height, or 133% */
-  /* Pure White */
   color: #ffffff;
 `;
-
 const ContainerDescription = styled.p`
-  width: 352px;
+  width: 300px;
+  /* height: 96px; */
   height: 96px;
-  /* Body / Text */
+  margin-left: 90px;
+  text-align: justify;
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
   line-height: 160%;
-  /* or 24px */
-  /* Pure White */
   color: #ffffff;
 `;
 
-
 export default function UpdateData(props) {
-  return (
-    <div>
-        <ContainerData>
-          <ContainerCard>
-            <ContainerImg>
-              {/* {props.dataUpdate.map(image, i) => key(i)} */}
-            </ContainerImg>
-          </ContainerCard>
-        </ContainerData>
-    </div>
-  )
+  return (            <ContainerData>
+              {props.dataUpdate.map((val, i) => (
+                <ContainerCard key={i}>
+                  <ContainerImg src={val.img} />
+                <ContainerTitle>{val.title}</ContainerTitle>
+                <ContainerDescription>{val.desc}</ContainerDescription>
+                </ContainerCard>
+              ))}
+            </ContainerData>
+  );
 }
