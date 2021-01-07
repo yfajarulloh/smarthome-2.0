@@ -3,6 +3,15 @@ import styled from "styled-components";
 import Title from "../../containers/title/Title";
 import HomeImg from "../../assets/images/home.png";
 import IconImg from "../../assets/images/service_icon.png";
+import IconImg1 from "../../assets/images/service1.png";
+import IconImg2 from "../../assets/images/service2.png";
+import IconImg3 from "../../assets/images/service3.png";
+import IconImg4 from "../../assets/images/service4.png";
+import IconImg5 from "../../assets/images/service5.png";
+import IconImg6 from "../../assets/images/service6.png";
+import IconImg7 from "../../assets/images/service7.png";
+import IconImg8 from "../../assets/images/service8.png";
+import ServiceData from "../../containers/serviceData/ServiceData";
 
 const ServicesContainer = styled.div`
   padding-inline-start: 20%;
@@ -109,10 +118,58 @@ const CardImage = styled.img`
   width: 55px;
   height: 55px;
 `;
-const featureServiceData = { title: "features" };
 
 export default class Services extends Component {
   render() {
+
+    const ServiceUpdateData = [
+      {
+        img: IconImg,
+        desc:
+          "Mobile Command Component",
+      },
+      {
+        img: IconImg1,
+        desc:
+          "Equipment Optimizer",
+      },
+      {
+        img: IconImg2,
+        desc:
+          "Lifecycle Prediction",
+      },
+      {
+        img: IconImg3,
+        desc:
+          "Troubleshooting Guide",
+      },
+      {
+        img: IconImg4,
+        desc:
+          "Energy Optimizer",
+      },
+      {
+        img: IconImg5,
+        desc:
+          "Smart Diagnostics",
+      },
+      {
+        img: IconImg6,
+        desc:
+          "Vital Equipment Scan",
+      },
+      {
+        img: IconImg7,
+        desc:
+          "Smart Alerts",
+      },
+      {
+        img: IconImg8,
+        desc:
+          "Preventative Maintenance",
+      },
+    ]
+
     return (
       <div>
         <ServicesContainer>
@@ -126,42 +183,7 @@ export default class Services extends Component {
               intelligence.
             </ContainerDetails>
             <ImageContainer src={HomeImg} alt="Home Imgae" />
-            <CardContainter>
-              <CardImage src={IconImg} />
-              <CardDescription>Mobile Command Component</CardDescription>
-            </CardContainter>
-            <CardContainter>
-              <CardImage src={IconImg} />
-              <CardDescription>Mobile Command Component</CardDescription>
-            </CardContainter>
-            <CardContainter>
-              <CardImage src={IconImg} />
-              <CardDescription>Mobile Command Component</CardDescription>
-            </CardContainter>
-            <CardContainter>
-              <CardImage src={IconImg} />
-              <CardDescription>Mobile Command Component</CardDescription>
-            </CardContainter>
-            <CardContainter>
-              <CardImage src={IconImg} />
-              <CardDescription>Mobile Command Component</CardDescription>
-            </CardContainter>
-            <CardContainter>
-              <CardImage src={IconImg} />
-              <CardDescription>Mobile Command Component</CardDescription>
-            </CardContainter>
-            <CardContainter>
-              <CardImage src={IconImg} />
-              <CardDescription>Mobile Command Component</CardDescription>
-            </CardContainter>
-            <CardContainter>
-              <CardImage src={IconImg} />
-              <CardDescription>Mobile Command Component</CardDescription>
-            </CardContainter>
-            <CardContainter>
-              <CardImage src={IconImg} />
-              <CardDescription>Mobile Command Component</CardDescription>
-            </CardContainter>
+            <ServiceData ServiceUpdateData={ServiceUpdateData}/>
           </ContentHomeContainer>
         </ServicesContainer>
       </div>

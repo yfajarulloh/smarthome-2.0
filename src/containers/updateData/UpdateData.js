@@ -45,14 +45,15 @@ const ContainerDescription = styled.p`
 `;
 
 export default function UpdateData(props) {
-  return (            <ContainerData>
-              {props.dataUpdate.map((val, i) => (
-                <ContainerCard key={i}>
-                  <ContainerImg src={val.img} />
-                <ContainerTitle>{val.title}</ContainerTitle>
-                <ContainerDescription>{val.desc}</ContainerDescription>
-                </ContainerCard>
-              ))}
-            </ContainerData>
+  return (
+    <ContainerData>
+      {props.dataUpdate.map((val, i) => (
+        <ContainerCard key={i}>
+          <ContainerImg src={val.img} />
+          <ContainerTitle>{val.title}</ContainerTitle>
+          <ContainerDescription>{val.desc}</ContainerDescription>
+        </ContainerCard>
+      ))}
+    </ContainerData>
   );
 }
