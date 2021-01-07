@@ -1,8 +1,9 @@
 import { faQuoteLeft, faQuoteRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Slide, Slider } from "pure-react-carousel";
 import React from "react";
 import styled from "styled-components";
-import ImgDot from "../../assets/images/Ellipse 32 (1).png"
+import ImgDot from "../../assets/images/Ellipse 32 (1).png";
 
 const CardContainer = styled.div`
   width: 500px;
@@ -97,24 +98,28 @@ const JobDesk = styled.span`
 `;
 
 export default function ReviewCard(props) {
-  const { text, userImgUrl, username, jobdesk } = props;
   return (
     <div>
-      <CardContainer>
-        {/* <userImg src={userImgUrl} alt="yusuf" /> */}
-        <QuoteIcon>
-          <FontAwesomeIcon
-            style={{ width: "2em", height: "70px" }}
-            icon={faQuoteRight}
-          />
-        </QuoteIcon>
-        <Container>
-        <UserImage src={ImgDot}/>
-          <ReviewText>{text}</ReviewText>
-          <UserName>{username}</UserName>
-          <JobDesk>{jobdesk}</JobDesk>
-        </Container>
-      </CardContainer>
+      <Slider>
+        {props.TestimonialData.map((val,i) => (
+        <Slide key={i}>
+          <CardContainer>
+            <QuoteIcon>
+              <FontAwesomeIcon
+                style={{ width: "2em", height: "70px" }}
+                icon={faQuoteRight}
+              />
+            </QuoteIcon>
+            <Container>
+              <UserImage src={val.img} />
+              <ReviewText>{val.text}</ReviewText>
+              <UserName>{val.username}</UserName>
+              <JobDesk>{val.jobdesk}</JobDesk>
+            </Container>
+          </CardContainer>
+        </Slide>
+        ))}
+      </Slider>
     </div>
   );
 }

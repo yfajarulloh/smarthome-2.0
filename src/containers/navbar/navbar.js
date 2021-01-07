@@ -9,6 +9,7 @@ const NavbarContainer = styled.div`
   padding-top: 20px;
   /* background-color:red; */
   align-items: center;
+  
 `;
 
 const LogoContainer = styled.img`
@@ -44,6 +45,9 @@ const TextNavbar = styled.p`
   &:hover {
     color: #1ECE7A;
   }
+  @media screen and (max-width: 480px) {
+    display:none;
+ }
 `;
 
 const TextNavbarRight = styled.p`

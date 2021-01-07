@@ -17,6 +17,16 @@ const ContainerDetails = styled.p`
   color: ${({ home }) => (home ? "#ffffff" : "#606C84")};
   margin-top: ${({ home }) => (home ? "36px" : "118px")};
   letter-spacing: ${({ home }) => (home ? "" : "0.01em")};
+
+  
+  @media screen and (max-width: 480px) {
+    width: 335px;
+    height: 116px;
+    font-size: 18px;
+    line-height: 160%;
+    text-align:center;
+    margin-bottom:30px;
+  }
 `;
 
 

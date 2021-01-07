@@ -12,8 +12,6 @@ import "pure-react-carousel/dist/react-carousel.es.css";
 import styled from "styled-components";
 import userImgUrl1 from "../../assets/images/Ellipse 32 (2).png";
 import userImgUrl2 from "../../assets/images/Ellipse 32 (1).png";
-import userImgUrl3 from "../../assets/images/Ellipse 32 (2).png";
-import userImgUrl4 from "../../assets/images/Ellipse 32 (1).png";
 import ReviewCard from "../../containers/reviewCards/ReviewCard";
 import Title from "../../containers/title/Title";
 // const styleCarouselProvider = styled(CarouselProvider)`
@@ -21,7 +19,7 @@ import Title from "../../containers/title/Title";
 const TestimonialContainer = styled.div`
   width: 1196.88px;
   height: 615px;
-  margin-top: 150px;
+  margin-top: 50px;
   text-align: center;
   align-items: center;
   /* background-color:rgb(131, 185, 185); */
@@ -85,6 +83,37 @@ const styleButtonBack = styled(ButtonBack)`
 `;
 export default class Testimonial extends Component {
   render() {
+    const TestimonialData = [
+      {
+        img: userImgUrl1,
+        text:
+          "We have been waiting on this product and now that we have installed a few. We think it will make the industry by storm.",
+        username: "Ryan Oliver",
+        jobdesk: "Design Manager Kiluna",
+      },
+      {
+        img: userImgUrl2,
+        text:
+          "We have been waiting on this product and now that we have installed a few. We think it will make the industry by storm.",
+        username: "Ryan Oliver",
+        jobdesk: "Design Manager Kiluna",
+      },
+      {
+        img: userImgUrl1,
+        text:
+          "We have been waiting on this product and now that we have installed a few. We think it will make the industry by storm.",
+        username: "Ryan Oliver",
+        jobdesk: "Design Manager Kiluna",
+      },
+      {
+        img: userImgUrl2,
+        text:
+          "We have been waiting on this product and now that we have installed a few. We think it will make the industry by storm.",
+        username: "Ryan Oliver",
+        jobdesk: "Design Manager Kiluna",
+      },
+    ];
+
     return (
       <TestimonialContainer>
         <Title>Testimonials</Title>
@@ -97,36 +126,7 @@ export default class Testimonial extends Component {
             totalSlides={4}
             visibleSlides={2}
           >
-            <Slider>
-              <Slide index={0}>
-                <ReviewCard
-                  text="We have been waiting on this product and now that we have installed a few. We think it will make the industry by storm."
-                  username="Ryan Oliver"
-                  jobdesk="Design Manager Kiluna"
-                />
-              </Slide>
-              <Slide index={1}>
-                <ReviewCard
-                  text="Thank you for introducing me to Siphome!  We like how the system gives updates to us and the homeowner as well to give us a real time update on how everything is working."
-                  username="Gladina Samantha"
-                  jobdesk="CEO JobDesk United, LLC"
-                />
-              </Slide>
-              <Slide index={2}>
-                <ReviewCard
-                  text="We have been waiting on this product and now that we have installed a few. We think it will make the industry by storm."
-                  username="Yusuf Fajarulloh"
-                  jobdesk="CEO Repository"
-                />
-              </Slide>
-              <Slide index={3}>
-                <ReviewCard
-                  text="We have been waiting on this product and now that we have installed a few. We think it will make the industry by storm."
-                  username="Nadya Aranti"
-                  jobdesk="CEO Nad Company"
-                />
-              </Slide>
-            </Slider>
+            <ReviewCard TestimonialData={TestimonialData}/>
             <StyledDotGroup />
           </CarouselProvider>
         </ContainerCarousel>

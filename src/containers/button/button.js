@@ -6,6 +6,11 @@ const ButtonContainer = styled.div`
   height: 44px;
   left: 119px;
   top: 64px;
+
+  @media screen and (max-width: 480px) {
+   padding-left:10px;
+   text-align:center;
+  }
 `;
 
 const ButtonDetails = styled.button`

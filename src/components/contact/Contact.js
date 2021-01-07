@@ -4,6 +4,18 @@ import ContactImg from "../../assets/images/illustrationre.png";
 import Button from "../../containers/button/button";
 import ImgLogo from "../../assets/images/logocontact.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faQuoteLeft,
+  faQuoteRight,
+  faFaceBook,
+} from "@fortawesome/free-solid-svg-icons";
+import {
+  faFacebook,
+  faInstagram,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
+
+// import {faTwitter}  from "@fortawesome/free-solid-svg-icons";
 
 const ContactContainer = styled.div`
   background-color: white;
@@ -233,7 +245,7 @@ const SubTitleContact = styled.div`
   line-height: 240%;
   color: #606c84;
   cursor: pointer;
-  &:hover{
+  &:hover {
     color: rgba(28, 87, 201, 1);
     font-weight: bold;
   }
@@ -274,6 +286,9 @@ export default class Contact extends Component {
               id="fname"
               name="firstname"
               placeholder="Enter name"
+              style={{
+                color: "black",
+              }}
             />
             <TextForm>Email (required) </TextForm>
             <Form
@@ -281,6 +296,9 @@ export default class Contact extends Component {
               id="fname"
               name="firstname"
               placeholder="Enter email"
+              style={{
+                color: "black",
+              }}
             />
             <TextForm>Subject </TextForm>
             <Form
@@ -288,9 +306,16 @@ export default class Contact extends Component {
               id="fname"
               name="firstname"
               placeholder="Enter subject"
+              style={{
+                color: "black",
+              }}
             />
             <TextForm>Select Job </TextForm>
-            <Selector>
+            <Selector
+              style={{
+                color: "black",
+              }}
+            >
               <option value="australia">Please Select</option>
               <option value="australia">Programmer</option>
               <option value="canada">QA</option>
@@ -302,9 +327,17 @@ export default class Contact extends Component {
               id="fname"
               name="firstname"
               placeholder="Enter company name"
+              style={{
+                color: "black",
+              }}
             />
             <TextForm>Message</TextForm>
-            <TextArea>Enter Message</TextArea>
+            <TextArea
+              placeholder="Enter company name"
+              style={{
+                color: "black",
+              }}
+            />
             <Button white>Send Now</Button>
           </RightContainer>
         </ContactContainer>
@@ -323,9 +356,7 @@ export default class Contact extends Component {
           <FooterMiddleLeftContainter>
             <TitleContact>Navigation</TitleContact>
             <SubTitleContact>Home</SubTitleContact>
-            <SubTitleContact>
-              Features
-            </SubTitleContact>
+            <SubTitleContact>Features</SubTitleContact>
             <SubTitleContact>Services</SubTitleContact>
             <SubTitleContact>Testimonials</SubTitleContact>
             <SubTitleContact>We Care</SubTitleContact>
@@ -341,15 +372,24 @@ export default class Contact extends Component {
           <FooterRightContainter>
             <TitleContact>Stay Connected</TitleContact>
             <SubTitleContact>
-              <FontAwesomeIcon icon="fa fa-facebook-official blue-color" />
+              <FontAwesomeIcon
+                style={{ marginRight: "10px" }}
+                icon={faFacebook}
+              />
               Facebook
             </SubTitleContact>
             <SubTitleContact>
-              <FontAwesomeIcon icon="fa fa-facebook-official blue-color" />
+              <FontAwesomeIcon
+                style={{ marginRight: "10px" }}
+                icon={faTwitter}
+              />
               Twitter
             </SubTitleContact>
             <SubTitleContact>
-              <FontAwesomeIcon icon="fa fa-facebook-official blue-color" />
+              <FontAwesomeIcon
+                style={{ marginRight: "10px" }}
+                icon={faInstagram}
+              />
               Instagram
             </SubTitleContact>
           </FooterRightContainter>
