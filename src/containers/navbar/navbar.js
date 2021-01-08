@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import LogoImg from "../../assets/images/logoshape.png";
+import Button from "../button/button";
 
 const NavbarContainer = styled.div`
   width: 1600px;
@@ -9,7 +10,6 @@ const NavbarContainer = styled.div`
   padding-top: 20px;
   /* background-color:red; */
   align-items: center;
-  
 `;
 
 const LogoContainer = styled.img`
@@ -30,7 +30,10 @@ const TextContainer = styled.h3`
   padding-right: 96px;
   cursor: pointer;
   &:hover {
-    color: #1ECE7A;
+    color: #1ece7a;
+  }
+  @media screen and (max-width: 480px) {
+    padding-right: 10px;
   }
 `;
 
@@ -43,12 +46,14 @@ const TextNavbar = styled.p`
   font-size: 17px;
   cursor: pointer;
   &:hover {
-    color: #1ECE7A;
+    color: #1ece7a;
   }
   @media screen and (max-width: 480px) {
-    display:none;
- }
+    display: none;
+  }
 `;
+
+
 
 const TextNavbarRight = styled.p`
   width: 180px;
@@ -58,7 +63,21 @@ const TextNavbarRight = styled.p`
   text-align: center;
   float: right;
   cursor: pointer;
+
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
 `;
+
+const ButtonContainer = styled.div`
+  @media screen and (min-width: 480px) {
+    display: none;
+  }
+`;
+
+
+// window.scroll()
+
 
 export default function Navbar() {
   return (
@@ -66,6 +85,10 @@ export default function Navbar() {
       <NavbarContainer>
         <LogoContainer src={LogoImg} />
         <TextContainer>Siphome</TextContainer>
+        <ButtonContainer>
+          {" "}
+          <Button>Menu</Button>
+        </ButtonContainer>
         <TextNavbar>Home</TextNavbar>
         <TextNavbar>Feature</TextNavbar>
         <TextNavbar>Service</TextNavbar>

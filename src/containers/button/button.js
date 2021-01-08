@@ -28,6 +28,7 @@ const ButtonDetails = styled.button`
   background-color: ${({ white }) => (white ? "#1ECE7A" : "transparent")};
   /* margin-left: ${({ white }) => (white ? "0px" : "16px")};
   display: inline; */
+  outline:none;
   transition: all 220ms ease-in-out;
   cursor: pointer;
   &:hover {

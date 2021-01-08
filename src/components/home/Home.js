@@ -7,7 +7,7 @@ import Navbar from "../../containers/navbar/navbar";
 import TitleDescription from "../../containers/title/TitleDescription";
 
 const TopSection = styled.div`
-  width: 100%;
+  /* width: 100%;  */
   height: 100vh;
   background-image: url(${backgroundImage});
   background-repeat: no-repeat;
@@ -17,7 +17,9 @@ const TopSection = styled.div`
 
   @media screen and (max-width: 480px) {
     background-image: url(${backgroundImageMobile});
+    /* width:100%; */
     padding-inline-start: 20px;
+    overflow-x: hidden;
   }
 `;
 
@@ -87,8 +89,8 @@ export default class Home extends Component {
             {/* <TitleDescription home /> */}
             <TitleDescription dataFromParent={this.state.data} home />
             <ButtonContainerHome>
-              <Button white>Home</Button>
-              <Button>Smart</Button>
+              <Button white>Get Started</Button>
+              <Button>Learn More</Button>
             </ButtonContainerHome>
           </ContainerBody>
         </TopSection>
